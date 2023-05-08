@@ -41,16 +41,14 @@ for contador in range(10):
     y1_axis.append(x_1)
     x_1 = x_1 + dt_1*(t_1 - x_1)
     t_1 = t_1 + dt_1
-
     # En caso de querer ver los resultados:
     # print(x_1)
     # print(t_1)
 
-
     # Para dt = 0.5
     x2_axis.append(t_2)
     y2_axis.append(x_2)
-    x_2 = x_2 + dt_1*(t_2- x_2)
+    x_2 = x_2 + dt_1*(t_2 - x_2)
     t_2 = t_2 + dt_2
     contador = contador + 0.1
 
@@ -78,11 +76,23 @@ for contador in range(10):
     # print(x_4)
     # print(t_4)
 
-plt.xlabel("Tiempo")
-plt.ylabel("x(t)")
-plt.plot(x1_axis, y1_axis, label='dt = 1')
-plt.plot(x2_axis, y2_axis, label='dt = 0.5')
-plt.plot(x3_axis, y3_axis, label='dt = 0.25')
-plt.plot(x4_axis, y4_axis, label='dt = 0.125')
-plt.legend()
-plt.show()
+valor_aproximado_1 = float(y1_axis[-1])
+valor_aproximado_2 = float(y2_axis[-1])
+valor_aproximado_3 = float(y3_axis[-1])
+valor_aproximado_4 = float(y4_axis[-1])
+print(valor_aproximado_1)
+print(valor_aproximado_2)
+print(valor_aproximado_3)
+print(valor_aproximado_4)
+
+
+
+
+# plt.xlabel("Tiempo")
+# plt.ylabel("x(t)")
+# plt.plot(x1_axis, y1_axis, label='dt = 1')
+# plt.plot(x2_axis, y2_axis, label='dt = 0.5')
+# plt.plot(x3_axis, y3_axis, label='dt = 0.25')
+# plt.plot(x4_axis, y4_axis, label='dt = 0.125')
+# plt.legend()
+# plt.show()
